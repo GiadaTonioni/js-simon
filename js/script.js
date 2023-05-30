@@ -26,12 +26,23 @@ setTimeout(function(){
     let inserisci3 = parseInt(prompt('scrivi un numero che ricordi'))
     let inserisci4 = parseInt(prompt('scrivi un numero che ricordi'))
     let inserisci5 = parseInt(prompt('scrivi un numero che ricordi'))
+    document.getElementById("result").innerHTML = numbers.includes(inserisci);
+    document.getElementById("result").innerHTML = numbers.includes(inserisci2);
+    document.getElementById("result").innerHTML = numbers.includes(inserisci3);
+    document.getElementById("result").innerHTML = numbers.includes(inserisci4);
+    document.getElementById("result").innerHTML = numbers.includes(inserisci5);
 }, 5000)
 
-
-if (numbers.includes) {
-    console.log
+if (numbers.include = true){
+    
 }
+else {
+    console.log('questo numero è sbagliato')
+}
+
+
+
+
 
 
 
