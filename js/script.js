@@ -8,7 +8,17 @@ for (let i = 0; i < 5; i++){
 
     let randomNum = Math.floor(Math.random() * (max - min + 1) + min)
     console.log(numbers[randomNum])
+    document.getElementById('numeri').innerHTML = `${numbers[randomNum]}`
 }
+
+setTimeout(function(){
+	
+}, seconds * 3000)
+
+let inserisci = parseInt.prompt('inserire il numero che ricordi')
+
+
+
 
 
 
