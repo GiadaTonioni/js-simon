@@ -8,26 +8,29 @@ for (let i = 0; i < 5; i++){
 
     let randomNum = Math.floor(Math.random() * (max - min + 1) + min)
     console.log(numbers[randomNum])
-    document.getElementById('numeri').innerHTML = `${numbers[randomNum]}`
+    let lista_numeri = document.getElementById('numeri')
+    let numeriSeq = document.createElement('li')
+    lista_numeri.innerHTML += `<li>${numbers[randomNum]}</li>`
+    lista_numeri.append(numeriSeq)
+
 }
 
 setTimeout(function(){
 	document.getElementById('numeri').innerHTML = `${''}`
-}, 3000)
-
-setTimeout(function(){
-    let inserisci = parseInt(prompt('scrivi un numero che ricordi'))
-    let inserisci = parseInt(prompt('scrivi un numero che ricordi'))
-    let inserisci = parseInt(prompt('scrivi il terzo numero che ricordi'))
-    let inserisci = parseInt(prompt('scrivi il qua numero che ricordi'))
-    let inserisci = parseInt(prompt('scrivi il primo numero che ricordi'))
 }, 4000)
 
 
+setTimeout(function(){
+    let inserisci = parseInt(prompt('scrivi un numero che ricordi'))
+    let inserisci2 = parseInt(prompt('scrivi un numero che ricordi'))
+    let inserisci3 = parseInt(prompt('scrivi un numero che ricordi'))
+    let inserisci4 = parseInt(prompt('scrivi un numero che ricordi'))
+    let inserisci5 = parseInt(prompt('scrivi un numero che ricordi'))
+}, 5000)
 
 
-if (inserisci === numbers.includes) {
-    
+if (numbers.includes) {
+    console.log
 }
 
 

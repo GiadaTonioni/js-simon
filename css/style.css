@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+    text-align: center;
+    margin-top: 70px;
+    background-color: aqua;
+}
+
+li {
+    display: inline;
+    padding: 50px;
+    font-size: 50px;
+}
