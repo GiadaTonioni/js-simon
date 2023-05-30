@@ -12,10 +12,23 @@ for (let i = 0; i < 5; i++){
 }
 
 setTimeout(function(){
-	
-}, seconds * 3000)
+	document.getElementById('numeri').innerHTML = `${''}`
+}, 3000)
 
-let inserisci = parseInt.prompt('inserire il numero che ricordi')
+setTimeout(function(){
+    let inserisci = parseInt(prompt('scrivi un numero che ricordi'))
+    let inserisci = parseInt(prompt('scrivi un numero che ricordi'))
+    let inserisci = parseInt(prompt('scrivi il terzo numero che ricordi'))
+    let inserisci = parseInt(prompt('scrivi il qua numero che ricordi'))
+    let inserisci = parseInt(prompt('scrivi il primo numero che ricordi'))
+}, 4000)
+
+
+
+
+if (inserisci === numbers.includes) {
+    
+}
 
 
 
