@@ -2,15 +2,6 @@ function generateRandomNumber(min, max){
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
-//per non ripetere numeri generati
-function uniqueRandomNumber(array, number){
-    while(check === false){
-        if(!array.includes(number)){
-            check = true
-        }
-    }
-}
-
 //numero utente
 function getUserNumbers(){
     let userNumbers = []
@@ -28,12 +19,11 @@ function getUserNumbers(){
 
 //numeri pc
 let randomNumbers = []
-
 for (let i = 0; i < 5; i++){
 
     let number = generateRandomNumber(1,50);
 
-    if(uniqueRandomNumber(randomNumbers, number)){
+    if(generateRandomNumber(randomNumbers, number)){
         randomNumbers.push(number)
     }
 
@@ -65,6 +55,8 @@ setTimeout(function(){
     document.getElementById('result').innerHTML = `Hai indovinato ${score} numeri, i numeri corretti sono ${guessedNumbers}`;
 
 }, 5000)
+
+
 
 
 
