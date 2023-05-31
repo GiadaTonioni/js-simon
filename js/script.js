@@ -1,44 +1,72 @@
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
-console.log(numbers)
+function generateRandomNumber(min, max){
+    return Math.floor(Math.random() * (max - min + 1) + min)
+}
+
+//per non ripetere numeri generati
+function uniqueRandomNumber(array, number){
+    while(check === false){
+        if(!array.includes(number)){
+            check = true
+        }
+    }
+}
+
+//numero utente
+function getUserNumbers(){
+    let userNumbers = []
+
+    while(userNumbers.lenght < 5){
+        let number = parseInt(prompt('Inserisci un numero che ricordi'))
+
+        if(!userNumbers.includes(number)){
+            userNumbers.push(number)
+        }
+    }
+
+    return userNumbers
+}
+
+//numeri pc
+let randomNumbers = []
 
 for (let i = 0; i < 5; i++){
 
-    let min = 0
-    let max = numbers.length
+    let number = generateRandomNumber(1,50);
 
-    let randomNum = Math.floor(Math.random() * (max - min + 1) + min)
-    console.log(numbers[randomNum])
-    let lista_numeri = document.getElementById('numeri')
-    let numeriSeq = document.createElement('li')
-    lista_numeri.innerHTML += `<li>${numbers[randomNum]}</li>`
-    lista_numeri.append(numeriSeq)
+    if(uniqueRandomNumber(randomNumbers, number)){
+        randomNumbers.push(number)
+    }
 
 }
 
+console.log(randomNumbers)
+
+document.getElementById('numeri').innerHTML = randomNumbers;
+
+//numeri spariscono
 setTimeout(function(){
 	document.getElementById('numeri').innerHTML = `${''}`
 }, 4000)
 
 
 setTimeout(function(){
-    let inserisci = parseInt(prompt('scrivi un numero che ricordi'))
-    let inserisci2 = parseInt(prompt('scrivi un numero che ricordi'))
-    let inserisci3 = parseInt(prompt('scrivi un numero che ricordi'))
-    let inserisci4 = parseInt(prompt('scrivi un numero che ricordi'))
-    let inserisci5 = parseInt(prompt('scrivi un numero che ricordi'))
-    document.getElementById("result").innerHTML = numbers.includes(inserisci);
-    document.getElementById("result").innerHTML = numbers.includes(inserisci2);
-    document.getElementById("result").innerHTML = numbers.includes(inserisci3);
-    document.getElementById("result").innerHTML = numbers.includes(inserisci4);
-    document.getElementById("result").innerHTML = numbers.includes(inserisci5);
+    let userNumbers = getUserNumbers()
+    console.log(userNumbers)
+
+    let guessedNumbers = []
+    let score = 0
+    for (let i=0; i<userNumbers.lenght; i++){
+        if(userNumbers.includes(userNumbers)){
+            guessedNumbers.push(userNumbers[i])
+            score++
+        }
+    }
+
+    document.getElementById('result').innerHTML = `Hai indovinato ${score} numeri, i numeri corretti sono ${guessedNumbers}`;
+
 }, 5000)
 
-if (numbers.include = true){
-    
-}
-else {
-    console.log('questo numero è sbagliato')
-}
+
 
 
 
